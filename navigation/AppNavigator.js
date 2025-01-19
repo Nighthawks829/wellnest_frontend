@@ -7,6 +7,17 @@ import RegisterPage from "../src/screens/RegisterPage";
 import MainPage from "../src/screens/ElderlyNCaregivers/MainPage"
 import MedicationReminderPage from "../src/screens/ElderlyNCaregivers/MedicationReminderPage";
 import AddReminder from "../src/screens/ElderlyNCaregivers/AddReminder";
+import SocialEventsScreen from "../src/screens/ElderlyNCaregivers/SocialEventsScreen";
+import CommunityOrganizerMainPage from "../src/screens/CommunityOrganizers/CommunityOrganizerMainPage";
+import CoProfilePage from "../src/screens/CommunityOrganizers/CoProfilePage";
+import CoEditProfilePage from "../src/screens/CommunityOrganizers/CoEditProfilePage";
+import CoSocialEventsManagement from "../src/screens/CommunityOrganizers/CoSocialEventsManagement";
+import CoCreateEvents from "../src/screens/CommunityOrganizers/CoCreateEvents";
+import CoCreateChatRoom from "../src/screens/CommunityOrganizers/CoCreateChatRoom";
+import ChatRoom from "../src/screens/CommunityOrganizers/ChatRoom";
+import CoManageChatRoom from "../src/screens/CommunityOrganizers/CoManageChatRoom";
+
+
 const Stack = createStackNavigator();
 
 const AppNavigator = () => (
@@ -31,6 +42,20 @@ const AppNavigator = () => (
             />
 
             <Stack.Screen name="AddReminder" component={AddReminder} />
+            <Stack.Screen name="SocialEventsScreen" component={SocialEventsScreen} />
+            <Stack.Screen
+                name="SocialEventsManagementScreen"
+                component={CoSocialEventsManagement}
+            />
+            <Stack.Screen
+                name="CommunityOrganizerMainPage"
+                component={CommunityOrganizerMainPage}
+                options={{ title: "CommunityOrganizerMainPage" }}
+            />
+            <Stack.Screen name="CoCreateEvents" component={CoCreateEvents} />
+            <Stack.Screen name="AddChatRoom" component={CoCreateChatRoom} />
+            <Stack.Screen name="chatRoom" component={ChatRoom} />
+            <Stack.Screen name="CoManageChatRoom" component={CoManageChatRoom} />
         </Stack.Navigator>
     </NavigationContainer>
 );
